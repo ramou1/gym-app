@@ -7,8 +7,9 @@ export const APP_ROUTES = {
 
     MAIN: 'main',
     HOME: 'home',
+    WORKOUTS: 'workouts',
+    WORKOUT_DETAILS: 'workout-details',
     PRIVACY: 'privacy',
-    
     PROFILE: 'profile',
     PROFILE_EDIT: 'profile-edit',
     EDIT_PASSWORD: 'edit-password',

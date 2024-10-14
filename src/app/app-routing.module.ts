@@ -1,32 +1,25 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { APP_ROUTES } from './constants/routes.const';
 
 const routes: Routes = [
   {
+    path: APP_ROUTES.START,
+    loadChildren: () => import('./pages/start/start.module').then(m => m.StartModule)
+  },
+  {
+    path: APP_ROUTES.MAIN,
+    loadChildren: () => import('./pages/main/main.module').then(m => m.MainModule),
+    // canActivate: [AuthGuard]
+  },
+  {
     path: '',
-    loadChildren: () => import('./pages/main/main.module').then(m => m.TabsPageModule)
+    redirectTo: APP_ROUTES.START,
+    pathMatch: 'full',
   },
-  {
-    path: 'register',
-    loadChildren: () => import('./pages/start/register/register.module').then( m => m.RegisterPageModule)
-  },
-  {
-    path: 'login',
-    loadChildren: () => import('./pages/start/login/login.module').then( m => m.LoginPageModule)
-  },
-  {
-    path: 'onboarding',
-    loadChildren: () => import('./pages/start/onboarding/onboarding.module').then( m => m.OnboardingPageModule)
-  },
-  {
-    path: 'home',
-    loadChildren: () => import('./pages/main/home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: 'profile',
-    loadChildren: () => import('./pages/main/profile/profile.module').then( m => m.ProfilePageModule)
-  }
 ];
+
+
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
