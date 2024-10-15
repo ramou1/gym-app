@@ -8,6 +8,7 @@ import { APP_ROUTES } from 'src/app/constants/routes.const';
 import { HomePage } from './home/home.page';
 import { ProfilePage } from './profile/profile.page';
 import { WorkoutsPage } from './workouts/workouts.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 
 const routes: Routes = [
@@ -32,10 +33,6 @@ const routes: Routes = [
       //   path: APP_ROUTES.PRIVACY,
       //   component: PrivacyPage,
       // },
-      // {
-      //   path: APP_ROUTES.TERMS,
-      //   component: TermsPage,
-      // },
       {
         path: '',
         redirectTo: APP_ROUTES.HOME,
@@ -49,7 +46,7 @@ const routes: Routes = [
   imports: [
     IonicModule,
     CommonModule,
-    // ComponentsModule,
+    ComponentsModule,
     ReactiveFormsModule,
     RouterModule.forChild(routes),
     FormsModule,

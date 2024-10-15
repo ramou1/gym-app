@@ -7,6 +7,7 @@ import { APP_ROUTES } from 'src/app/constants/routes.const';
 import { LoginPage } from './login/login.page';
 import { OnboardingPage } from './onboarding/onboarding.page';
 import { RegisterPage } from './register/register.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 // const SHOW_ONBOARDING = localStorage.getItem(STORAGE.SHOW_ONBOARDING);
 // const INITIAL_ROUTE = SHOW_ONBOARDING === '0' ? APP_ROUTES.INITIAL_CHOICE : APP_ROUTES.ONBOARDING;
@@ -39,7 +40,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    // ComponentsModule,
+    ComponentsModule,
     FormsModule,
     IonicModule,
     ReactiveFormsModule,

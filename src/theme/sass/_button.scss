@@ -1,0 +1,13 @@
+ion-button {
+    margin: 0;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 700;    
+    letter-spacing: 0;
+    --box-shadow: none;
+    --border-radius: 10px;   
+}
+
+ion-button + ion-button {
+    margin-top: 10px;
+}

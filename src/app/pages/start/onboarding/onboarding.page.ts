@@ -16,7 +16,7 @@ export class OnboardingPage extends BasePage implements OnInit {
   ngOnInit() {
   }
 
-  public skip() {
+  skip() {
     this.navigateTo([APP_ROUTES.START, APP_ROUTES.LOGIN]);
   }
 
