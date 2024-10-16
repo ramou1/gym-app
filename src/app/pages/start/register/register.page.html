@@ -1,10 +1,37 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>register</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content class="ion-padding">
-  <ion-button (click)="register()" expand="block">Register</ion-button>
-  <ion-button (click)="login()" expand="block" fill="outline">Login</ion-button>
+
+  <div class="center-content">
+    <form [formGroup]="registerGroup">
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input type="text" formControlName="name" name="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" formControlName="email" name="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="password" name="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Confirm Password</ion-label>
+        <ion-input type="password" formControlName="confirmPassword" name="confirmPassword"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Phone</ion-label>
+        <ion-input type="tel" formControlName="phone" name="phone"></ion-input>
+      </ion-item>
+
+      <ion-button (click)="register()" expand="block">Register</ion-button>
+      <ion-button (click)="login()" expand="block" fill="outline">Login</ion-button>
+    </form>
+  </div>
+
 </ion-content>
