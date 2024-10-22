@@ -2,7 +2,7 @@ import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MainComponent } from './main.component';
+import { MemberComponent } from './member.component';
 import { RouterModule, Routes } from '@angular/router';
 import { APP_ROUTES } from 'src/app/constants/routes.const';
 import { HomePage } from './home/home.page';
@@ -14,7 +14,7 @@ import { ComponentsModule } from 'src/app/components/components.module';
 const routes: Routes = [
   {
     path: '',
-    component: MainComponent,
+    component: MemberComponent,
     children: [
       {
         path: APP_ROUTES.HOME,
@@ -51,6 +51,6 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     FormsModule,
   ],
-  declarations: [MainComponent, HomePage, WorkoutsPage, ProfilePage],
+  declarations: [MemberComponent, HomePage, WorkoutsPage, ProfilePage],
 })
-export class MainModule { }
+export class MemberModule { }

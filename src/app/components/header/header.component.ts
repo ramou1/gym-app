@@ -7,7 +7,7 @@ import * as moment from 'moment';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent  implements OnInit {
-  userName: string = 'John Doe';  // Pode ser dinâmico
+  userName: string = 'John Doe';  // TODO: deixar dinâmico
   greeting: string;
 
   ngOnInit() {
@@ -15,7 +15,7 @@ export class HeaderComponent  implements OnInit {
   }
 
   setGreeting() {
-    const currentHour = moment().hour(); // Ou use new Date().getHours() se preferir o nativo
+    const currentHour = moment().hour();
 
     if (currentHour >= 5 && currentHour < 12) {
       this.greeting = 'Good Morning';

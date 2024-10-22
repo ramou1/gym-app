@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: 'main.component.html',
-  styleUrls: ['main.component.scss']
+  selector: 'app-member',
+  templateUrl: 'member.component.html',
+  styleUrls: ['member.component.scss']
 })
-export class MainComponent implements OnInit {
+export class MemberComponent implements OnInit {
 
   tabClicked = 'home';
   constructor() { }

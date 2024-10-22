@@ -1,7 +1,7 @@
 form {
     ion-item {
         margin-bottom: 10px;
-        font-size: 14px;
+        // font-size: 14px;
         // font-weight: 700;  
         --box-shadow: none;
         --border-radius: 10px;   
@@ -10,4 +10,8 @@ form {
             
         }
     }
+}
+
+ion-item {
+    --inner-border-width: 0px; /* Remove a borda debaixo do ion-item */
 }

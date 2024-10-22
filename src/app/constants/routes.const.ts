@@ -5,13 +5,15 @@ export const APP_ROUTES = {
     REGISTER: 'register',
     RECOVER_PASSWORD: 'recover-password',
 
-    MAIN: 'main',
+    MEMBER: 'member',
     HOME: 'home',
     WORKOUTS: 'workouts',
     WORKOUT_DETAILS: 'workout-details',
     PRIVACY: 'privacy',
     PROFILE: 'profile',
     PROFILE_EDIT: 'profile-edit',
+
+    ADMIN: 'admin',
     EDIT_PASSWORD: 'edit-password',
     SIGNATURE: 'signature',
     TERMS: 'terms',

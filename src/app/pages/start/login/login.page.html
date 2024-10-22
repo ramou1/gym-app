@@ -1,9 +1,9 @@
 <ion-content>
   <ion-list>
     <ion-item>
-      <ion-select aria-label="Favorite Fruit" interface="popover" (ionChange)="handleChange($event)" value="aluno">
+      <ion-select aria-label="Favorite Fruit" interface="popover" (ionChange)="handleChange($event)" value="member">
         <ion-select-option value="admin">admin</ion-select-option>
-        <ion-select-option value="aluno">aluno</ion-select-option>
+        <ion-select-option value="member">aluno</ion-select-option>
       </ion-select>
     </ion-item>
   </ion-list>
@@ -12,7 +12,7 @@
     <form [formGroup]="loginGroup">
       <ion-item>
         <ion-label position="floating">Email ou CPF</ion-label>
-        <ion-input type="text" formControlName="emailCpf" name="emailCpf" (ionInput)="onEmailCpfInput($event)">
+        <ion-input type="text" formControlName="email" name="email">
         </ion-input>
       </ion-item>
       <ion-item>

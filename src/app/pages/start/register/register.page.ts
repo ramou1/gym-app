@@ -1,5 +1,6 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
+import { USER } from 'src/app/constants/mock.const';
 import { APP_ROUTES } from 'src/app/constants/routes.const';
 import { BasePage } from 'src/app/core/base-page';
 
@@ -29,11 +30,11 @@ export class RegisterPage extends BasePage implements OnInit {
       phone: [null, [Validators.required]]
     });
 
-    this.registerGroup.patchValue({ name: 'Nome teste', email: 'teste@gmail.com', password: '123456789', confirmPassword: '123456789', phone: '11999999999' });
+    this.registerGroup.patchValue({ ...USER, password: '123456789', confirmPassword: '123456789' });
   }
 
   async register() {
-    this.navigateTo([APP_ROUTES.MAIN]);
+    this.navigateTo([APP_ROUTES.MEMBER]);
   }
 
   async login() {

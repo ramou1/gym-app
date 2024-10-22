@@ -1,0 +1,15 @@
+.custom-searchbar {
+    border: 1px solid var(--ion-color-medium);
+    border-radius: 10px;
+    --box-shadow: none;
+
+    .searchbar-search-icon.sc-ion-searchbar-md {
+        top: 6px;
+    }
+
+    .searchbar-input.sc-ion-searchbar-md {
+        font-size: 14px;
+        line-height: 20px;
+        padding-inline-start: 45px;
+    }
+}
