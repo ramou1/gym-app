@@ -9,5 +9,14 @@
         <div class="user-greeting">{{ greeting }}</div>
       </div>
     </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="openNotifications()">
+        <ion-icon slot="icon-only" name="notifications"></ion-icon>
+      </ion-button>
+      <ion-button (click)="openSearch()">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>

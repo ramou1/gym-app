@@ -64,8 +64,15 @@ export class LoginPage extends BasePage implements OnInit {
     }
   }
 
-
   register() {
     this.navigateTo([APP_ROUTES.START, APP_ROUTES.REGISTER]);
+  }
+
+  signUpWithGoogle() {
+    // this.authService.signUpWithGoogle();
+  }
+
+  signUpWithFacebook() {
+    // this.authService.signUpWithFacebook();
   }
 }

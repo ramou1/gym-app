@@ -1,9 +1,40 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>onboarding</ion-title>
+    <ion-title>Onboarding</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
+  <!-- <swiper-container #swiper class="onboarding-slider" pagination="true" pagination-clickable="true"
+    centered-slides="true" (slideChange)="onSlideChange()">
+
+    <swiper-slide>
+      <div class="slide-content">
+        <img src="assets/images/slide1.jpg" alt="Monitoramento de Treinos">
+        <p>Acompanhe seu progresso nos treinos e alcance seus objetivos!</p>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide>
+      <div class="slide-content">
+        <img src="assets/images/slide2.jpg" alt="Evolução">
+        <p>Monitore sua evolução física com gráficos e dados atualizados.</p>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide>
+      <div class="slide-content">
+        <img src="assets/images/slide3.jpg" alt="Personalização">
+        <p>Personalize seu plano de treino e se mantenha motivado!</p>
+      </div>
+    </swiper-slide>
+
+  </swiper-container>
+
+  <div class="button-container">
+    <ion-button *ngIf="!isLastSlide" (click)="nextSlide()" expand="block">Next</ion-button>
+    <ion-button *ngIf="isLastSlide" (click)="skip()" expand="block">Skip</ion-button>
+  </div> -->
+
   <ion-button (click)="skip()" expand="block">Skip</ion-button>
 </ion-content>

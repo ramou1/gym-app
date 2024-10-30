@@ -25,8 +25,24 @@
         <ion-input type="password" formControlName="confirmPassword" name="confirmPassword"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="floating">Phone</ion-label>
-        <ion-input type="tel" formControlName="phone" name="phone"></ion-input>
+        <ion-label position="floating">Objective</ion-label>
+        <ion-select formControlName="objective" name="objective">
+          <ion-select-option value="gain">Gain</ion-select-option>
+          <ion-select-option value="lose">Lose</ion-select-option>
+          <ion-select-option value="maintain">Maintain</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Height</ion-label>
+        <ion-input type="number" formControlName="height" name="height"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Weight</ion-label>
+        <ion-input type="number" formControlName="weight" name="weight"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Birthdate</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" formControlName="birthdate" name="birthdate"></ion-datetime>
       </ion-item>
 
       <ion-button (click)="register()" expand="block">Register</ion-button>

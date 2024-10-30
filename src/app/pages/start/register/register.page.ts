@@ -27,7 +27,9 @@ export class RegisterPage extends BasePage implements OnInit {
       email: [null, [Validators.required]],
       password: [null, [Validators.required]],
       confirmPassword: [null, [Validators.required]],
-      phone: [null, [Validators.required]]
+      height: [null, [Validators.required]],
+      weight: [null, [Validators.required]],
+      birthdate: [null]
     });
 
     this.registerGroup.patchValue({ ...USER, password: '123456789', confirmPassword: '123456789' });

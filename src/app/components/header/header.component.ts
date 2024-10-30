@@ -25,4 +25,11 @@ export class HeaderComponent  implements OnInit {
       this.greeting = 'Good Night';
     }
   }
+
+  openNotifications() {
+  }
+
+  openSearch() {
+  }
+  
 }
