@@ -1,6 +1,4 @@
-import { Component, Injector, OnInit, ViewChild } from '@angular/core';
-// import { SwiperComponent } from 'swiper/angular';
-// import { SwiperOptions } from 'swiper';
+import { Component, ElementRef, Injector, OnInit, ViewChild } from '@angular/core';
 import { APP_ROUTES } from 'src/app/constants/routes.const';
 import { BasePage } from 'src/app/core/base-page';
 
@@ -10,8 +8,9 @@ import { BasePage } from 'src/app/core/base-page';
   styleUrls: ['./onboarding.page.scss'],
 })
 export class OnboardingPage extends BasePage implements OnInit {
-  // @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
-  // isLastSlide = false;
+  @ViewChild('swiper') swiper: any;
+  swiperRef: ElementRef | undefined;
+  isLastSlide = false;
 
   // swiperConfig: SwiperOptions = {
   //   pagination: { clickable: true },
@@ -22,21 +21,30 @@ export class OnboardingPage extends BasePage implements OnInit {
     super(injector);
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  // // Próximo slide
+  // Próximo slide
   // nextSlide() {
+  //   console.log(this.swiper)
   //   if (this.swiper) {
   //     this.swiper.swiperRef.slideNext();
   //   }
   // }
 
-  // // Verifica se está no último slide para exibir "Skip"
-  // onSlideChange() {
-  //   if (this.swiper) {
-  //     this.isLastSlide = this.swiper.swiperRef.isEnd;
-  //   }
-  // }
+  async previousSlide() {
+    this.swiperRef?.nativeElement.swiper.slidePrev();
+  }
+
+  async nextSlide() {
+    this.swiperRef?.nativeElement.swiper.slideNext();
+  }
+
+  // Verifica se está no último slide para exibir "Skip"
+  onSlideChange() {
+    if (this.swiper) {
+      this.isLastSlide = this.swiper.swiperRef.isEnd;
+    }
+  }
 
   // Navegação para a página de login
   skip() {

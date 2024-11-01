@@ -5,8 +5,8 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <!-- <swiper-container #swiper class="onboarding-slider" pagination="true" pagination-clickable="true"
-    centered-slides="true" (slideChange)="onSlideChange()">
+  <swiper-container #swiper class="onboarding-slider" pagination="true" pagination-clickable="true"
+    centered-slides="true" (swiperslidechange)="onSlideChange()">
 
     <swiper-slide>
       <div class="slide-content">
@@ -34,7 +34,7 @@
   <div class="button-container">
     <ion-button *ngIf="!isLastSlide" (click)="nextSlide()" expand="block">Next</ion-button>
     <ion-button *ngIf="isLastSlide" (click)="skip()" expand="block">Skip</ion-button>
-  </div> -->
+  </div>
 
   <ion-button (click)="skip()" expand="block">Skip</ion-button>
 </ion-content>
